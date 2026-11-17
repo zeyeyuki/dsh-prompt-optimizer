@@ -1,0 +1,63 @@
+{
+  "name": "dsh-prompt-optimizer",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Offline prompt optimizer for DeepSeek Harness: an Optimize prompt chip beside the composer opens a right-Sidebar panel that expands any rough prompt into a structured one — no API key, no network, no model call.",
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "prompt",
+    "prompt-engineering",
+    "prompt-optimizer",
+    "offline",
+    "cordis"
+  ],
+  "author": "沢雪 (zeyeyuki)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeyeyuki/dsh-prompt-optimizer.git"
+  },
+  "homepage": "https://github.com/zeyeyuki/dsh-prompt-optimizer#readme",
+  "bugs": {
+    "url": "https://github.com/zeyeyuki/dsh-prompt-optimizer/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node test/engine-check.cjs && node test/smoke.cjs"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-sidebar-right"
+      ]
+    }
+  }
+}

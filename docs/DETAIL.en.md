@@ -1,0 +1,1 @@
+![The prompt optimizer panel: the Optimize prompt chip beside the composer hands a draft to the panel in the right Sidebar, which returns a structured prompt](preview.svg)

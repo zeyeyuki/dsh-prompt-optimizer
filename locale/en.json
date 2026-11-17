@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Prompt optimizer",
+    "description": "Adds an “Optimize prompt” chip at the left of the composer tool row, right of the + and mode controls. Clicking it opens a “Prompt optimizer” page in the right Sidebar: a chip that carries the current composer draft over, a text box for a rough prompt, task-type chips (auto, code, writing, analysis, plan, image, role-play, general) and strength chips (light, standard, deep). Press “Optimize” and the same text is expanded into a structured prompt — role, task, context to fill in, concrete requirements, output format, a self-check bar, and open questions. “Copy” takes the result, “Put in composer” writes it back into the composer (it asks once before replacing text you already typed), and “Another version” rotates the requirement set and the closing ask. Everything runs in the browser on a built-in rule engine: no API key, no network request, no model call, nothing leaves the machine. The panel remembers its last input and options locally, and does not store generated results. Because the engine is rule based, the output language follows the input language, and it cannot add facts you did not provide — its value is structure, explicit constraints, and self-check plus clarifying questions, not invented content. Turning the plugin off removes the chip and the page; the composer is unaffected.",
+    "detail": "docs/DETAIL.en.md"
+  }
+}
